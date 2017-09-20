@@ -1,5 +1,2 @@
-require "insider_trading/version"
-
-module InsiderTrading
-  # Your code goes here...
-end
+require_relative "./insider_trading/version"
+require_relative './insider_trading/cli'
