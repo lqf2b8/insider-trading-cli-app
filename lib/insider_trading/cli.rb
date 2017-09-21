@@ -1,14 +1,13 @@
 class InsiderTrading::CLI
 
 	def call
-		@user_input = "1" #kind of odd but on the first pass of the while loop I want it to choose option two
+		@user_input = "1" #kind of odd but on the first pass of the while loop I want it to choose option one
 		puts "Welcome"
 		while @user_input != "exit"
 			if @user_input == "1"
 				ticker_prompt
 				ticker_followup_prompt
 			elsif @user_input == "2"
-				puts "this is where I will call the insider scraper and then prompt to see if they want to enter another ticker or exit"
 				insider_followup_prompt
 			elsif @user_input == "exit"
 			else
@@ -32,7 +31,7 @@ class InsiderTrading::CLI
 		puts "Check you later, bro"
 	end
 
-	def catcheall
+	def catchall
 		puts "you didn't choose a valid option, bro! Please try again"
 		@user_input = gets.strip
 	end
