@@ -1,6 +1,8 @@
 class InsiderTrading::CLI
 
 	def call
-		puts "Type a ticker, brah!"
+		puts "Welcome"
+		@stock_info = InsiderTrading::Stock.create
+		puts "The stock ticker is #{@stock_info.name}"
 	end
 end

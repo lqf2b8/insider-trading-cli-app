@@ -6,12 +6,12 @@ require "insider_trading/version"
 Gem::Specification.new do |spec|
   spec.name          = "insider_trading"
   spec.version       = InsiderTrading::VERSION
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = ["Lucas Fields"]
   spec.email         = ["lqf2b8@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Returns Name and Price info for given ticker and prompts for insider trading options}
+  spec.description   = %q{Returns Name and Price info for given ticker and prompts for insider trading options}
+  spec.homepage      = "https://github.com/lqf2b8/insider-trading-cli-app"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
