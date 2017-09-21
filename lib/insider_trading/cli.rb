@@ -20,7 +20,7 @@ class InsiderTrading::CLI
 
 	def ticker_prompt
 		@stock_info = InsiderTrading::Stock.create
-		puts "That ticker is for #{@stock_info.name} which is trading at #{@stock_info.price}."
+		puts "That name of this insturment is #{@stock_info.name} and it is trading at #{@stock_info.price}."
 	end
 
 	def ticker_followup_prompt
@@ -38,6 +38,8 @@ class InsiderTrading::CLI
 	end
 
 	def insider_followup_prompt
+		puts "This insturment has had #{@stock_info.insider3} net insider shares traded the last 3 months"
+		puts "It has also had #{@stock_info.insider12} net insider shares traded the last 12 months"
 		puts "Press 1 to enter a different ticker. (exit to quit)"
 		@user_input = gets.strip
 	end
