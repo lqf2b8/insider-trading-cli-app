@@ -1,8 +1,8 @@
 # InsiderTrading
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/insider_trading`. To experiment with that code, run `bin/console` for an interactive prompt.
+Small command line gem that prompts user for a ticker symbol. It then scrapes nasdaq.com for full name, price and net insider buys (sells) for the last 3 month and 12 month time periods. 
 
-TODO: Delete this and the text above, and describe your gem
+*** There is no exception handleinsg to run when user enters a bad ticker ****
 
 ## Installation
 
@@ -20,9 +20,6 @@ Or install it yourself as:
 
     $ gem install insider_trading
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
