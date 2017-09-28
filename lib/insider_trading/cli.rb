@@ -9,6 +9,8 @@ class InsiderTrading::CLI
 				ticker_followup_prompt
 			elsif @user_input == "2"
 				insider_followup_prompt
+			elsif @user_input == "3"
+				display_previous_stocks				
 			elsif @user_input == "exit"
 			else
 				catchall
@@ -18,12 +20,14 @@ class InsiderTrading::CLI
 	end
 
 	def ticker_prompt
-		@stock_info = InsiderTrading::Stock.create
+		puts "Enter a ticker, bro!"
+		input = gets.strip.downcase
+		@stock_info = InsiderTrading::Scraper.create_and_complete_stock(input)
 		puts "That name of this instrument is #{@stock_info.name} and it is trading at $#{@stock_info.price}."
 	end
 
 	def ticker_followup_prompt
-		puts "Press 1 to enter a different ticker or 2 to see insider transactions for this ticker. (type exit to quit)"
+		puts "Press 1 to enter a different ticker or 2 to see insider transactions for this ticker or 3 to see previous stocks searched. (type exit to quit)"
 		@user_input = gets.strip
 	end
 
@@ -42,6 +46,15 @@ class InsiderTrading::CLI
 		puts "Press 1 to enter a different ticker. (exit to quit)"
 		@user_input = gets.strip
 	end
+
+	def display_previous_stocks
+		InsiderTrading::Stock.all.each do |stock|
+			puts "#{stock.name}"
+		end
+		ticker_followup_prompt
+
+	end
+
 		
 
 
